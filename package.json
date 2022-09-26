@@ -1,0 +1,42 @@
+{
+  "name": "luchamaskcontract",
+  "version": "1.0.0",
+  "description": "Smart contract for Lucha Mask",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy:tokens": "npx hardhat run scripts/deploy-tvk.js --network mumbai",
+    "deploy:middle": "npx hardhat run scripts/deploy-middle.js --network mumbai",
+    "deploy:masks": "npx hardhat run scripts/deploy-mask.js --network mumbai",
+    "deploy:custom": "npx hardhat run scripts/deploy-mask-custom.js --network mumbai",
+    "interact": "node scripts/interact.js",
+    "flatten:mask": "npx hardhat flatten ./contracts/LuchaMaskRandom.sol > ./flattened_contracts/LuchaMaskRandom.sol",
+    "flatten:tokens": "npx hardhat flatten ./contracts/MockToken.sol > ./flattened_contracts/MockToken.sol",
+    "flatten:middle": "npx hardhat flatten ./contracts/MiddleContract.sol > ./flattened_contracts/MiddleContract.sol",
+    "flatten:custom": "npx hardhat flatten ./contracts/LuchaMashCustom.sol > ./flattened_contracts/LuchaMashCustom.sol"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Fahad294@bitbucket.org/space-jupitor/luchamaskcontract.git"
+  },
+  "author": "SL2Studios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/space-jupitor/luchamaskcontract/issues"
+  },
+  "homepage": "https://bitbucket.org/space-jupitor/luchamaskcontract#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@openzeppelin/contracts": "^4.6.0",
+    "erc721a": "^3.3.0",
+    "hardhat": "^2.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "web3": "^1.7.0"
+  }
+}
